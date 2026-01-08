@@ -1,0 +1,63 @@
+---
+import "../styles/global.css";
+---
+
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro Basics</title>
+  </head>
+
+  <body>
+    <!-- HEADER (altid på alle sider) -->
+    <header class="bg-blue-500 text-white p-4 flex items-center justify-between">
+      <a href="/">
+        <img src="/billeder/logo.svg" alt="Logo" class="h-10 w-auto" />
+      </a>
+
+      <button id="burgerButton" aria-label="Menu">
+        <img src="/billeder/burger.svg" alt="Menu" class="h-6 w-auto" />
+      </button>
+    </header>
+
+    <!-- OVERLAY: klik på baggrunden for at lukke -->
+    <div
+      id="menuBackdrop"
+      class="hidden fixed inset-0 bg-black/40 z-40"
+    ></div>
+
+    <!-- MENU (den blå du vil have) -->
+  <nav
+  id="menuOverlay"
+  class="hidden absolute top-16 left-0 right-0 bg-blue-500 text-white p-4 flex flex-col gap-4 text-center z-50"
+>
+
+      <a href="/drone" class="text-3xl font-bold">DroneNFA2 Udvikling</a>
+      <a href="/" class="text-3xl font-bold">Nyheder</a>
+      <a href="/" class="text-3xl font-bold">Shop</a>
+      <a href="/" class="text-3xl font-bold">Om os</a>
+      <a href="/" class="text-3xl font-bold">Kontakt</a>
+    </nav>
+
+    <!-- Side-indhold -->
+    <slot />
+
+    <script>
+      const btn = document.getElementById("burgerButton");
+      const menu = document.getElementById("menuOverlay");
+      const backdrop = document.getElementById("menuBackdrop");
+
+      function toggleMenu() {
+        menu.classList.toggle("hidden");
+        backdrop.classList.toggle("hidden");
+      }
+
+      btn.addEventListener("click", toggleMenu);
+      backdrop.addEventListener("click", toggleMenu);
+    </script>
+  </body>
+</html>
