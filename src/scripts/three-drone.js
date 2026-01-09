@@ -72,7 +72,7 @@ const material = new THREE.PointsMaterial({
 
 const sphere = new THREE.Points(geometry, material);
 particles = sphere;
-sphere.scale.set(8, 8, 8);
+sphere.scale.set(7, 7, 7);
 
 sphere.position.set(0, 0, 0);
 scene.add(sphere);
@@ -90,8 +90,11 @@ document.getElementById("btn-knot")?.addEventListener("click", () => {
 });
 
 document.getElementById("btn-firkant")?.addEventListener("click", () => {
-  particles.geometry = new THREE.TorusfirkantGeometry(1, 1, 1, 12);
+  particles.geometry = new THREE.BoxGeometry(1, 1, 1, 20, 20, 20);
 });
+
+
+
 
 
   // Mode switching 
