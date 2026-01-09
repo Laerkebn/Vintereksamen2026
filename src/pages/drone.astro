@@ -4,16 +4,49 @@ import ThreeScene from "../components/ThreeScene.astro";
 ---
 
 <Layout>
+  <main class="p-3">
 
-     <main class="p-6">
-    <h1 class="text-2xl p-3 font-bold">her skal min treejs drone stå</h1>
+    <h1 class="text-2xl p-3 font-bold">
+      her står der en overskrift
+    </h1>
+
+    <!-- 👇 WRAPPER rundt om Three.js + knapper -->
+    <div class="relative w-full max-w-xl mx-auto">
+
+      <!-- Three.js scene -->
+      <ThreeScene />
+
+<!-- UI: fokus-knapper øverst -->
+<div class="absolute top-3 flex flex-wrap justify-center gap-2 z-10 max-w-full px-2">
+  <button id="btn-lazor" class="px-3 py-2 rounded bg-white/90 text-black text-sm">
+    Lazor
+  </button>
+  <button id="btn-ring" class="px-3 py-2 rounded bg-white/90 text-black text-sm">
+    Rundbånd
+  </button>
+  <button id="btn-arme" class="px-3 py-2 rounded bg-white/90 text-black text-sm">
+    Arme
+  </button>
+  <button id="btn-luft" class="px-3 py-2 rounded bg-white/90 text-black text-sm">
+    Lufttrykker
+  </button>
+</div>
+
+<!-- UI: reset i hjørnet -->
+<div class="absolute bottom-3 right-3 z-10">
+  <button id="btn-reset"
+          class="px-3 py-2 rounded bg-white/90 text-black text-sm shadow">
+    Reset
+  </button>
+</div>
 
 
-  <ThreeScene />
+    </div>
 
-  <div class="p-6">
-    <h1 class="text-2xl p-3 font-bold">her skal min treejs drone stå</h1>
+    <h1 class="text-2xl p-3 font-bold">
+      her skal min treejs drone stå
+    </h1>
 
-  </div>
-    </main>
+  </main>
 </Layout>
+
