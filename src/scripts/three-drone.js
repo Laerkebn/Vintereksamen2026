@@ -4,9 +4,10 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 
 export function startDroneScene(container) {
 
-  // --- Scene basics ---
+  //  Scene/box opsætning 
   const scene = new THREE.Scene();
   scene.background = new THREE.Color(0x26264C);
+
 
   const w = container.clientWidth || 800;
   const h = container.clientHeight || 400;
