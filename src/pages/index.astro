@@ -3,10 +3,34 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-	<img src="/billeder/forsidebillede.png" alt="Forside billede" class="w-screen h-auto mx-auto " />
-  <main class="p-6">
-    <h1 class="text-2xl p-3 font-bold">ET NYTÅR FOR ALLE</h1>
-	<h1 class="text-sm p-3 ">FOLA er en organisation skabt af forældre i 1974, for at sikre at forældrene blev hørt af politikerne. Vi repræsenterer forældre med børn i dagpleje, vuggestuer, børnehaver og SFO samt klubtilbud. Vi sørger for, at forældrenes perspektiv på deres børns hverdag også bliver hørt inde på Chrisitiansborg og i Kommunernes Landsforening (KL). Vi taler med et landsdækkende forældremandat og jo flere vi er, desto mere bliver der lyttet til vores mærkesager.
-</h1>
+  <!-- Wrapper -->
+  <div class="relative w-screen">
+    <img
+      src="/billeder/forsidebillede.png"
+      alt="Forside billede"
+      class="w-screen h-auto mx-auto"
+    />
+
+    <!-- Tekst oven på billedet -->
+    <h1 class="absolute bottom-6 left-4 text-6xl text-[#E3A14B] font-bold leading-none">
+      ET<br />
+      NYTÅR<br />
+      FOR<br />
+      ALLE
+    </h1>
+  </div>
+
+  <main class="p-3">
+    <h2 class="text-2xl text-[#E3A14B] font-bold">Hvem er vi?</h2>
+    <p class="text-sm text-[#26264C]">
+    Fremtidsbevægelsen Grønt Nytår er en innovativ og aktivistisk bevægelse, 
+    der arbejder for udvikling og udbredelse af dronebaserede alternativer til 
+    traditionelt nytårsfyrværkeri. Bevægelsens formål er at reducere 
+    miljøbelastning, støj og sundhedsmæssige gener for både mennesker og dyr, 
+    samtidig med at nytårets festlige og visuelle oplevelser bevares. Gennem 
+    teknologisk innovation, oplysning og dialog søger FremtidsBevægelsen Grønt 
+    Nytår at skabe en mere bæredygtig og inkluderende nytårstradition, hvor 
+    hensynet til natur og sårbare grupper går hånd i hånd med fælles fejring.
+    </p>
   </main>
 </Layout>

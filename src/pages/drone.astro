@@ -4,11 +4,10 @@ import ThreeScene from "../components/ThreeScene.astro";
 ---
 
 <Layout>
-  <main class="p-3">
+  <main class="p-3 bg-[#EFEEEE]">
 
     <h1 class="text-2xl p-3 font-bold">
-      her står der en overskrift
-    </h1>
+      DroneFGN26 - Vores Grønne Teknologisk Udviklingsprojekt    </h1>
 
     <!-- bagrund rundt om Three.js + knapper -->
     <div class="relative w-full max-w-xl mx-auto">
@@ -23,16 +22,16 @@ import ThreeScene from "../components/ThreeScene.astro";
   class="hidden absolute top-3 left-1/2 -translate-x-1/2
          flex flex-row items-center justify-center gap-2 z-10"
 >
-      <button id="btn-lazor" class="px-3 py-2 rounded bg-white/90 text-black text-sm">
+      <button id="btn-lazor" class="px-3 py-2 rounded bg-[#EFEEEE]/90 text-black text-sm">
       Lazor
     </button>
-    <button id="btn-ring" class="px-3 py-2 rounded bg-white/90 text-black text-sm">
+    <button id="btn-ring" class="px-3 py-2 rounded bg-[#EFEEEE]/90 text-black text-sm">
       Rundbånd
     </button>
-    <button id="btn-arme" class="px-3 py-2 rounded bg-white/90 text-black text-sm">
+    <button id="btn-arme" class="px-3 py-2 rounded bg-[#EFEEEE]/90 text-black text-sm">
       Arme
     </button>
-    <button id="btn-luft" class="px-3 py-2 rounded bg-white/90 text-black text-sm">
+    <button id="btn-luft" class="px-3 py-2 rounded bg-[#EFEEEE]/90 text-black text-sm">
       Lufttrykker
     </button>
   </div>
@@ -43,13 +42,13 @@ import ThreeScene from "../components/ThreeScene.astro";
   id="result-ui"
   class="hidden absolute top-3 left-1/2 -translate-x-1/2 flex flex-row items-center justify-center gap-2 z-10"
 >
-       <button id="btn-torus" class="px-3 py-2 rounded bg-white/90 text-black text-sm">
+       <button id="btn-torus" class="px-3 py-2 rounded bg-[#EFEEEE]/90 text-[#26264C] text-sm">
         Donut</button>
-  <button id="btn-sphere" class="px-3 py-2 rounded bg-white/90 text-black text-sm">
+  <button id="btn-sphere" class="px-3 py-2 rounded bg-[#EFEEEE]/90 text-[#26264C] text-sm">
     Kugle</button>
-  <button id="btn-knot" class="px-3 py-2 rounded bg-white/90 text-black text-sm">
+  <button id="btn-knot" class="px-3 py-2 rounded bg-[#EFEEEE]/90 text-[#26264C] text-sm">
     Knude</button>
-    <button id="btn-firkant" class="px-3 py-2 rounded bg-white/90 text-black text-sm">
+    <button id="btn-firkant" class="px-3 py-2 rounded bg-[#EFEEEE]/90 text-[#26264C] text-sm">
       Firkant</button>
  
 
@@ -58,16 +57,17 @@ import ThreeScene from "../components/ThreeScene.astro";
 
       <!-- bund knapper -->
       <div class="absolute bottom-3 right-3 z-10 flex gap-2">
-       <button id="btn-reset" class="px-3 py-2 rounded bg-white/90 text-black text-sm shadow">
+       <button id="btn-reset" class="px-3 py-2 rounded bg-[#EFEEEE]/90 text-[#26264C] text-sm shadow">
       Tilbage
     </button>
-    <button id="btn-resultat" class="px-3 py-2 rounded bg-white/90 text-black text-sm shadow">
+    <button id="btn-resultat" class="px-3 py-2 rounded bg-[#EFEEEE]/90 text-[#26264C] text-sm shadow">
       Resultat
     </button>
       </div>
     </div>
 
-    <h1 class="text-2xl p-3 font-bold">her skal min treejs drone stå</h1>
+    <h2 class="text-2xl p-3 text-[#E3A14B] font-bold">Hvad er DroneFGN26?</h2>
+    <h1 class="text-sm text-[#26264C] p-3">DroneFGN26 er et teknologisk udviklingsprojekt med fokus på design og implementering af koordinerede droneshows som et bæredygtigt alternativ til traditionelt fyrværkeri. Projektet arbejder med autonome multirotor-droner, der via centraliseret styring, positionsdata (GNSS) og realtidskommunikation kan udføre præcise formationer og lyssekvenser i luftrummet. Systemet er udviklet med energieffektivitet, genanvendelige komponenter og støjreduktion som centrale parametre. Formålet er at demonstrere, hvordan avanceret drone-teknologi, softwarestyret koreografi og LED-baserede lyssystemer kan skabe sikre, skalerbare og miljøvenlige visuelle events uden partikeludledning, brandrisiko eller eksplosive materialer.</h1>
   </main>
 
 </Layout>

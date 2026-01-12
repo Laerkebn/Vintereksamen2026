@@ -6,7 +6,7 @@ export function startDroneScene(container) {
 
   // --- Scene basics ---
   const scene = new THREE.Scene();
-  scene.background = new THREE.Color(0x000000);
+  scene.background = new THREE.Color(0x26264C);
 
   const w = container.clientWidth || 800;
   const h = container.clientHeight || 400;
@@ -46,7 +46,7 @@ export function startDroneScene(container) {
     }
   });
 
-  // --- Objects we can show/hide ---
+  //Objects jeg kan show/hide
   let droneModel = null;
   let particles = null;
   let particlesVisible = false;
@@ -54,7 +54,7 @@ export function startDroneScene(container) {
   // Lazor
   const Lazor = new THREE.Mesh(
     new THREE.BoxGeometry(0.1, 5, 0.1),
-    new THREE.MeshStandardMaterial({ color: 0x8aff8a })
+    new THREE.MeshStandardMaterial({ color: 0x58A851 })
   );
   Lazor.position.set(0, -4, 0);
   scene.add(Lazor);
@@ -64,7 +64,7 @@ export function startDroneScene(container) {
 const geometry = new THREE.TorusGeometry(0.7, 0.2, 20, 100)
   //matriale
 const material = new THREE.PointsMaterial({
-  color: 0x8aff8a,
+  color: 0x58A851,
   size: 0.3,
   sizeAttenuation: true,
   
