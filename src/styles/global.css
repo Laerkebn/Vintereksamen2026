@@ -1,1 +1,39 @@
 @import "tailwindcss";
+
+/* Dette er sat ind af chgbtpt for at tilføje variable fontes til projektet */
+@font-face {
+  font-family: "InterVar";
+  src: url("/fonts/Inter-VariableFont_opsz,wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SourceSans3Var";
+  src: url("/fonts/SourceSans3-VariableFont_wght.ttf") format("truetype");
+  font-weight: 200 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Default brødtekst */
+html {
+  font-family: "SourceSans3Var", system-ui, -apple-system, sans-serif;
+}
+
+/* Hjælpeklasser */
+.font-heading {
+  font-family: "InterVar", system-ui, sans-serif;
+  font-weight: 700;
+}
+
+.font-body {
+  font-family: "SourceSans3Var", system-ui, -apple-system, sans-serif;
+  font-weight: 400;
+}
+
+.font-ui {
+  font-family: "SourceSans3Var", system-ui, -apple-system, sans-serif;
+  font-weight: 600; /* Semi-bold */
+}

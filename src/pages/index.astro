@@ -3,36 +3,240 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  <div class="bg-[#EFEEEE] min-h-screen">
-  <!-- Wrapper -->
-  <div class="relative w-screen">
-    <img
-      src="/billeder/forsidebillede1.png"
-      alt="Forside billede"
-      class="w-screen h-auto mx-auto"
-    />
+  <div class="min-h-screen bg-[#EFEEEE]">
+    <!-- Forside billede -->
+    <div class="relative w-screen">
+      <img
+        src="/billeder/forsidebillede1.png"
+        alt="Forside billede"
+        class="w-screen h-auto mx-auto"
+      />
 
-    <!-- Tekst oven på billedet -->
-    <h1 class="absolute bottom-6 left-4 text-6xl text-[#E3A14B] font-bold leading-none">
-      ET<br />
-      NYTÅR<br />
-      FOR<br />
-      ALLE
-    </h1>
-  </div>
+      <h1 class="font-heading absolute bottom-1 left-4 text-6xl text-[#E3A14B] font-bold leading-none">
+        ET<br />
+        NYTÅR<br />
+        FOR<br />
+        ALLE
+      </h1>
+    </div>
 
-  <main class="p-3">
-    <h2 class="text-2xl text-[#26264C] font-bold">Hvem er vi?</h2>
-    <p class="text-sm text-[#26264C]">
-    Fremtidsbevægelsen Grønt Nytår er en innovativ og aktivistisk bevægelse, 
-    der arbejder for udvikling og udbredelse af dronebaserede alternativer til 
-    traditionelt nytårsfyrværkeri. Bevægelsens formål er at reducere 
-    miljøbelastning, støj og sundhedsmæssige gener for både mennesker og dyr, 
-    samtidig med at nytårets festlige og visuelle oplevelser bevares. Gennem 
-    teknologisk innovation, oplysning og dialog søger FremtidsBevægelsen Grønt 
-    Nytår at skabe en mere bæredygtig og inkluderende nytårstradition, hvor 
-    hensynet til natur og sårbare grupper går hånd i hånd med fælles fejring.
-    </p>
-  </main>
+    <!-- Alt indhold med padding hele vejen -->
+   <main class="p-5 max-w-xl mx-auto">
+
+      <h2 class="font-heading text-2xl text-[#26264C] font-bold">Hvem er vi?</h2>
+      <p class="font-body mt-2 text-sm text-[#26264C]">
+        Fremtidsbevægelsen Grønt Nytår er en innovativ og aktivistisk bevægelse,
+        der arbejder for udvikling og indførelse af dronebaserede alternativer til
+        erstatning af traditionelt nytårsfyrværkeri. Bevægelsens formål er at
+        reducere miljøbelastning, støj og sundhedsmæssige gener for både mennesker
+        og dyr, samtidig med at nytårets festlige og visuelle oplevelser bevares.
+        Gennem teknologisk innovation, oplysning og dialog søger FremtidsBevægelsen
+        Grønt Nytår at skabe en mere bæredygtig og inkluderende nytårstradition,
+        hvor hensynet til natur og sårbare grupper går hånd i hånd med fælles fejring.
+      </p>
+
+      <h2 class="font-heading mt-5 text-2xl text-[#26264C] font-bold">
+        Hvorfor vælge et grønt nytår?
+      </h2>
+
+      <!-- Graf-boks (knapper + billeder) -->
+      <section class="mt-3 rounded-2xl border border-[#26264C]/15 bg-[#EFEEEE] p-3 shadow-sm">
+
+         <!-- Billeder -->
+        <div class="relative mt-3">
+          <img
+            id="chart-1"
+            src="/billeder/antalskader.png"
+            alt="Antal skader"
+            class="w-full h-auto mx-auto rounded-xl"
+          />
+
+          <img
+            id="chart-2"
+            src="/billeder/Alvorlige.png"
+            alt="Alvorlige skader"
+            class="w-full h-auto mx-auto rounded-xl hidden"
+          />
+
+          <img
+            id="chart-3"
+            src="/billeder/Aldersfordeling.png"
+            alt="Aldersfordeling"
+            class="w-full h-auto mx-auto rounded-xl hidden"
+          />
+        </div>
+
+        <!-- Knapper -->
+        <div class="flex flex-wrap justify-center gap-2">
+          <button
+            type="button"
+            class="font-ui chart-btn inline-flex items-center justify-center h-9 px-3 rounded-md
+                   bg-[#E3A14B] text-[#26264C] text-sm font-medium
+                   border border-[#26264C]/20 shadow-sm"
+            data-target="chart-1"
+          >
+            Antal skader
+          </button>
+
+          <button
+            type="button"
+            class="font-ui chart-btn inline-flex items-center justify-center h-9 px-3 rounded-md
+                   bg-[#E3A14B] text-[#26264C] text-sm font-medium
+                   border border-[#26264C]/20 shadow-sm"
+            data-target="chart-2"
+          >
+            Alvorlige skader
+          </button>
+
+          <button
+            type="button"
+            class="font-ui chart-btn inline-flex items-center justify-center h-9 px-3 rounded-md
+                   bg-[#E3A14B] text-[#26264C] text-sm font-medium
+                   border border-[#26264C]/20 shadow-sm"
+            data-target="chart-3"
+          >
+            Aldersfordeling
+          </button>
+          
+          <p class="font-body mt-3 text-sm text-[#26264C]">
+        Nytår forbindes ofte med fest og fællesskab – men tallene viser, at fyrværkeri
+        også har en betydelig menneskelig pris. Som det fremgår af grafen over det
+        samlede antal skader, har der gennem en længere årrække hvert nytår været
+        omkring 200–300 personer, som har haft behov for akut behandling efter
+        fyrværkeriulykker. Grafen over skadernes alvorlighed viser samtidig, at ca.
+        10–20 % af skaderne er alvorlige og kræver indlæggelse. Endelig viser
+        aldersfordelingen et tydeligt mønster: Børn og unge – særligt i aldersgrupperne
+        0–25 år – udgør en stor del af de tilskadekomne. Derfor handler et grønt nytår
+        ikke kun om miljø og dyrevelfærd, men også om forebyggelse, sikkerhed og en
+        tryggere nytårsaften for alle.
+      </p>
+        </div>
+
+       
+      </section>
+
+      <script is:inline>
+        const buttons = document.querySelectorAll(".chart-btn");
+        const charts = ["chart-1", "chart-2", "chart-3"].map((id) =>
+          document.getElementById(id)
+        );
+
+        function showChart(targetId, activeBtn) {
+          charts.forEach((img) => img && img.classList.add("hidden"));
+          const target = document.getElementById(targetId);
+          if (target) target.classList.remove("hidden");
+
+          buttons.forEach((b) => {
+            b.classList.remove("bg-[#EEB770]");
+            b.classList.add("bg-[#E3A14B]");
+          });
+          activeBtn.classList.remove("bg-[#E3A14B]");
+          activeBtn.classList.add("bg-[#EEB770]");
+        }
+
+        buttons.forEach((btn) => {
+          btn.addEventListener("click", () => {
+            const targetId = btn.getAttribute("data-target");
+            if (targetId) showChart(targetId, btn);
+          });
+        });
+      </script>
+
+      
+
+      <h2 class="font-heading mt-6 text-2xl text-[#26264C] font-bold">
+        Læs vores nytårsguides:
+      </h2>
+      <h3 class="font-body mt-3 text-xl text-[#58A851] underline font-bold">Nytår med kæledyr:</h3>
+      <h3 class="font-body mt-3 text-xl text-[#58A851] underline font-bold">Nytår med PTSD eller autisme:</h3>
+      <h3 class="font-body mt-3 text-xl text-[#58A851] underline font-bold">Den grønne nytårsguide</h3>
+
+      <!-- Medlemsblanket + link til borgerforslag -->
+      <section class="mt-6 rounded-2xl border border-[#26264C]/15 bg-[#EFEEEE] p-4 shadow-sm">
+        <h2 class="font-heading text-2xl text-[#26264C] font-bold">
+          Bliv medlem af Fremtidsbevægelsen Grønt Nytår
+        </h2>
+
+        <p class="font-body mt-1 text-sm text-[#26264C] opacity-80">
+          Meld dig ind og hjælp os med at skabe et grønnere nytår. Du kan også støtte vores
+          borgerforslag direkte her:
+          <a
+            href="INDSÆT_LINK_TIL_BORGERFORSLAG_HER"
+            target="_blank"
+            rel="noreferrer"
+            class="font-body underline decoration-[#E3A14B] underline-offset-4 hover:opacity-90"
+          >
+            Se borgerforslaget
+          </a>
+        </p>
+
+        <form class="mt-4 grid gap-3" onsubmit="return false;">
+          <div class="grid gap-1">
+            <label class="font-body text-sm text-[#26264C]" for="member-name">Navn *</label>
+            <input
+              id="member-name"
+              name="name"
+              type="text"
+              autocomplete="name"
+              placeholder="Dit fulde navn"
+              class="w-full rounded-xl border border-[#26264C]/20 bg-[#EFEEEE] p-3 text-sm text-[#26264C] outline-none focus:border-[#26264C]/60"
+              required
+            />
+          </div>
+
+          <div class="grid gap-1">
+            <label class="font-body text-sm text-[#26264C]" for="member-email">Email *</label>
+            <input
+              id="member-email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              placeholder="din@email.dk"
+              class="w-full rounded-xl border border-[#26264C]/20 bg-[#EFEEEE] p-3 text-sm text-[#26264C] outline-none focus:border-[#26264C]/60"
+              required
+            />
+          </div>
+
+          <div class="grid gap-1">
+            <label class="font-body text-sm text-[#26264C]" for="member-city">
+              Postnr. / By (valgfri)
+            </label>
+            <input
+              id="member-city"
+              name="city"
+              type="text"
+              autocomplete="postal-code"
+              placeholder="f.eks. 2300 København S"
+              class="w-full rounded-xl border border-[#26264C]/20 bg-[#EFEEEE] p-3 text-sm text-[#26264C] outline-none focus:border-[#26264C]/60"
+            />
+          </div>
+
+          <div class="flex items-start gap-2 rounded-xl bg-[#26264C]/5 p-3">
+            <input
+              id="member-consent"
+              name="consent_membership"
+              type="checkbox"
+              class="mt-1 h-4 w-4 rounded border-[#26264C]/30"
+              required
+            />
+            <label class="font-body text-xs text-[#26264C] opacity-80" for="member-consent">
+              Jeg vil gerne være medlem og accepterer, at I må gemme mine oplysninger til medlemsadministration. *
+            </label>
+          </div>
+
+          <div class="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+            <button
+              id="member-btn"
+              type="button"
+              class="font-ui inline-flex items-center justify-center rounded-xl bg-[#E3A14B] px-4 py-3 text-sm font-semibold text-[#26264C] shadow-sm hover:opacity-95 active:opacity-90"
+            >
+              Bliv medlem
+            </button>
+
+            <p id="member-status" class="text-xs text-[#26264C] opacity-70"></p>
+          </div>
+        </form>
+      </section>
+    </main>
   </div>
 </Layout>
