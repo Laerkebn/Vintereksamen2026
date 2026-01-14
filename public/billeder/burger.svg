@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 133 107">
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 578 409.98">
   <!-- Generator: Adobe Illustrator 29.8.1, SVG Export Plug-In . SVG Version: 2.1.1 Build 2)  -->
   <defs>
     <style>
       .st0 {
-        fill: #231f20;
-        stroke: #231f20;
-        stroke-miterlimit: 10;
+        fill: #26264c;
       }
     </style>
   </defs>
-  <rect class="st0" x=".5" y=".5" width="132" height="21.49"/>
-  <rect class="st0" x=".5" y="85.01" width="132" height="21.49"/>
-  <rect class="st0" x=".5" y="42.75" width="132" height="21.49"/>
+  <rect class="st0" x="37.08" y="5.3" width="503.85" height="86.04" rx="13.34" ry="13.34"/>
+  <rect class="st0" x="37.08" y="140.97" width="503.85" height="86.04" rx="13.34" ry="13.34"/>
+  <rect class="st0" x="37.08" y="276.64" width="503.85" height="86.04" rx="13.34" ry="13.34"/>
 </svg>
