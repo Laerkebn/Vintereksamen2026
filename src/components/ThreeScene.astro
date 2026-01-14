@@ -1,6 +1,5 @@
-<div id="three-container" class="w-full h-[400px] bg-black rounded-lg"></div>
+---
+const { containerId } = Astro.props;
+---
 
-<script>
-  import { startDroneScene } from "../scripts/three-drone.js";
-  startDroneScene(document.getElementById("three-container"));
-</script>
+<div id={containerId} class="w-full h-[400px] bg-black rounded-lg"></div>
