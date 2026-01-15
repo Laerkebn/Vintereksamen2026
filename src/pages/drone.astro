@@ -8,16 +8,16 @@ import ThreeScene from "../components/ThreeScene.astro";
 <Layout>
   <main class="p-5 bg-[#EFEEEE] max-w-xl mx-auto">
 
-    <h1 class="font-heading text-3xl text-[#26264C] font-bold leading-tight">
-      DroneFGN26 - Vores<br />Grønne Teknologisk<br />Udviklingsprojekt
+    <h1 class="font-heading text-3xl text-[#26264C] mb-6 font-bold leading-tight">
+      DroneFGN26 - Vores Grønne Projekt
     </h1>
 
      <!-- Hvem er vi-->
-    <h2 class="font-heading text-3xl mt-6 text-[#26264C] font-bold">
+    <h2 class="font-heading text-3xl text-[#26264C] font-bold">
       Hvad er DroneFGN26?
     </h2>
     
-    <!--🤖--> <p class="font-body mt-2 text-sm text-[#26264C] leading-relaxed">  
+    <!--🤖--> <p class="font-body  mb-3 text-sm text-[#26264C] leading-relaxed">  
       DroneFGN26 er et teknologisk udviklingsprojekt med fokus på design og implementering af koordinerede droneshows
       som et bæredygtigt alternativ til traditionelt fyrværkeri. Projektet arbejder med autonome multirotor-droner,
       der via centraliseret styring, positionsdata (GNSS) og realtidskommunikation kan udføre præcise formationer og
@@ -25,87 +25,182 @@ import ThreeScene from "../components/ThreeScene.astro";
       som centrale parametre.
     </p>
 
-    <!-- DRONE SEKTION -->
-    <section class="mt-4 rounded-2xl border border-[#26264C]/15 bg-[#EFEEEE] p-4 shadow-sm">
-      <div class="flex flex-wrap justify-center gap-2 mb-3">
-        <button id="btn-lazor" class="mode-btn-top font-ui h-9 px-3 rounded-md bg-[#E3A14B] text-[#26264C] text-sm font-medium border border-[#26264C]/20 shadow-sm">
-          Laser Unit
-        </button>
-        <button id="btn-ring" class="mode-btn-top font-ui h-9 px-3 rounded-md bg-[#E3A14B] text-[#26264C] text-sm font-medium border border-[#26264C]/20 shadow-sm">
-         Gyrobånd
-        </button>
-        <button id="btn-arme" class="mode-btn-top font-ui h-9 px-3 rounded-md bg-[#E3A14B] text-[#26264C] text-sm font-medium border border-[#26264C]/20 shadow-sm">
-         Frame arms
-        </button>
-        <button id="btn-luft" class="mode-btn-top font-ui h-9 px-3 rounded-md bg-[#E3A14B] text-[#26264C] text-sm font-medium border border-[#26264C]/20 shadow-sm">
-          Lufttrykker
-        </button>
-      </div>
-
-       
+     <!-- DRONE SEKTION -->
   <!-- Scene 1 -->
-<div class="relative">
-  <ThreeScene containerId="three-top" />
+  <div class="relative">
+    <ThreeScene containerId="three-top" />
 
-  <!-- Tilbage knap -->
-  <button
-    id="btn-reset"
-    class="font-ui absolute bottom-3 right-3 h-10 px-3 rounded-md
-           bg-[#E3A14B] text-[#26264C] text-sm font-medium
-           border border-[#26264C]/20 shadow-sm"
-    type="button"
-  >
-    Tilbage
+    <!-- Tilbage knap -->
+    <button
+      id="btn-reset"
+      class="font-ui absolute bottom-3 right-3 h-10 px-3 rounded-md
+             bg-[#E3A14B] text-[#26264C] text-sm font-medium
+             border border-[#26264C]/20 shadow-sm"
+      type="button"
+    >
+      Tilbage
+    </button>
+  </div>
+
+ <!-- DRONE knapper -->
+<div class="grid grid-cols-2 gap-2 mb-3 mt-2 max-w-sm mx-auto">
+  <button id="btn-lazor" class="mode-btn-top font-ui h-9 px-3 rounded-md bg-[#E3A14B] text-[#26264C] text-sm font-medium border border-[#26264C]/20 shadow-sm">
+    Laser Unit
+  </button>
+  <button id="btn-ring" class="mode-btn-top font-ui h-9 px-3 rounded-md bg-[#E3A14B] text-[#26264C] text-sm font-medium border border-[#26264C]/20 shadow-sm">
+   Gyrobånd
+  </button>
+  <button id="btn-arme" class="mode-btn-top font-ui h-9 px-3 rounded-md bg-[#E3A14B] text-[#26264C] text-sm font-medium border border-[#26264C]/20 shadow-sm">
+   Frame arms
+  </button>
+  <button id="btn-luft" class="mode-btn-top font-ui h-9 px-3 rounded-md bg-[#E3A14B] text-[#26264C] text-sm font-medium border border-[#26264C]/20 shadow-sm">
+    Lufttrykker
   </button>
 </div>
-    </section>
-    <!-- Knapper til partikelsystem-->
-    <h2 class="font-heading text-3xl mt-8 text-[#26264C] font-bold">
-      DroneFGN26 i action
+  <!-- Tekst som vises når man klikker på knapperne -->
+  <h3 id="mode-title" class="font-heading text-2xl text-[#26264C] font-bold">
+    Vælg en komponent
+  </h3>
+  <p id="mode-text" class="font-body text-sm mb-6 text-[#26264C]mb-6 leading-relaxed">
+    Klik på en af knapperne ovenfor for at lære mere om dronens komponenter.
+  </p>
+
+     <!-- Hvorfor droner-->
+    <h2 class="font-heading text-2xl text-[#26264C] font-bold">
+      Hvorfor droner?
     </h2>
+    <p class="font-body text-sm mb-3 text-[#26264C]">      
+      I Danmark udleder nytårsfyrværkeri årligt ca. 213.000 kg CO₂, mens ét droneshow pr. kommune samlet set
+      kun udleder omkring 380 kg CO₂ om året – svarende til ca. 560 gange lavere udledning. 
+      Derudover er produktionen af droner markant mere bæredygtig, da dronens komponenter består af op til
+      90% genanvendelige materialer og har en forventet levetid på op til ni år, før et eventuelt
+      batteriskifte er nødvendigt.
+    </p>
 
-    <section class="mt-4 rounded-2xl border border-[#26264C]/15 bg-[#EFEEEE] p-4 shadow-sm">
-      <div class="flex flex-wrap justify-center gap-2 mb-3">
-        <button id="btn-torus" class="mode-btn-bottom font-ui h-9 px-3 rounded-md bg-[#E3A14B] text-[#26264C] text-sm font-medium border border-[#26264C]/20 shadow-sm">
-          Donut
-        </button>
-        <button id="btn-sphere" class="mode-btn-bottom font-ui h-9 px-3 rounded-md bg-[#E3A14B] text-[#26264C] text-sm font-medium border border-[#26264C]/20 shadow-sm">
-          Kugle
-        </button>
-        <button id="btn-knot" class="mode-btn-bottom font-ui h-9 px-3 rounded-md bg-[#E3A14B] text-[#26264C] text-sm font-medium border border-[#26264C]/20 shadow-sm">
-          Knude
-        </button>
-        <button id="btn-firkant" class="mode-btn-bottom font-ui h-9 px-3 rounded-md bg-[#E3A14B] text-[#26264C] text-sm font-medium border border-[#26264C]/20 shadow-sm">
-          Firkant
-        </button>
-      </div>
+    <!-- Billeder -->
+    <div class="relative">
+      <img
+        id="chart-1"
+        src="/billeder/kgco2.svg"
+        alt="Forbrugsomkostninger for dronen vs. fyrværkeri"
+        class="w-full h-auto mx-auto rounded-xl"
+      />
 
-       
-      
+      <img
+        id="chart-2"
+        src="/billeder/kgco2pro.svg"
+        alt="Produktionsomkostninger for dronen vs. fyrværkeri"
+        class="w-full h-auto mx-auto rounded-xl hidden"
+      />
+    </div>
 
-      <!-- Scene 2 -->
-      <div class="relative">
-        <ThreeScene containerId="three-bottom" />
+   <!-- Knapper -->
+<div class="grid grid-cols-2 mb-6 mt-2 gap-2 max-w-sm mx-auto">
+  <button
+    type="button"
+    class="font-ui chart-btn inline-flex items-center justify-center h-9 px-3 rounded-md
+           bg-[#E3A14B] text-[#26264C] text-sm font-medium
+           border border-[#26264C]/20 shadow-sm"
+    data-target="chart-1"
+  >
+   Årligt forbrug
+  </button>
 
-        <!-- Stor skærm knap -->
-        <button
-          id="btn-fullscreen"
-          class="font-ui absolute bottom-3 right-3 h-10 px-3 rounded-md
-                 bg-[#E3A14B] text-[#26264C] text-sm font-medium
-                 border border-[#26264C]/20 shadow-sm"
-          type="button"
-        >
-          Stor skærm
-        </button>
-      </div>
-    </section>
+  <button
+    type="button"
+    class="font-ui chart-btn inline-flex items-center justify-center h-9 px-3 rounded-md
+           bg-[#E3A14B] text-[#26264C] text-sm font-medium
+           border border-[#26264C]/20 shadow-sm"
+    data-target="chart-2"
+  >
+    Produktion
+  </button>
+</div>
 
+    <script is:inline>
+      const buttons = document.querySelectorAll(".chart-btn");
+      const charts = ["chart-1", "chart-2"].map((id) =>
+        document.getElementById(id)
+      );
+
+      function showChart(targetId, activeBtn) {
+        charts.forEach((img) => img && img.classList.add("hidden"));
+        const target = document.getElementById(targetId);
+        if (target) target.classList.remove("hidden");
+
+        buttons.forEach((b) => {
+          b.classList.remove("bg-[#EEB770]");
+          b.classList.add("bg-[#E3A14B]");
+        });
+        activeBtn.classList.remove("bg-[#E3A14B]");
+        activeBtn.classList.add("bg-[#EEB770]");
+      }
+
+      buttons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const targetId = btn.getAttribute("data-target");
+          if (targetId) showChart(targetId, btn);
+        });
+      });
+    </script>
+
+   <!-- Knapper til partikelsystem-->
+<h2 class="font-heading text-3xl text-[#26264C] font-bold">
+  DroneFGN26 – visuel demonstration
+</h2>
+  <!--🤖--> <p class="font-body  mb-3 text-sm text-[#26264C] leading-relaxed">  
+      Få en forsmag på DroneFGN26’s smukke formationer på himlen gennem vores VR-oplevelse nedenfor – 
+      eller anvend dem som visuel baggrundsunderholdning til din næste begivenhed.
+    </p>
+    <!-- Scene 2 -->
+    <div class="relative">
+      <ThreeScene containerId="three-bottom" />
+
+      <!-- Stor skærm knap -->
+      <button
+        id="btn-fullscreen"
+        class="font-ui absolute bottom-3 right-3 h-10 px-3 rounded-md
+               bg-[#E3A14B] text-[#26264C] text-sm font-medium
+               border border-[#26264C]/20 shadow-sm"
+        type="button"
+      >
+        Fuld skærm
+      </button>
+    </div>
+
+<div class="grid grid-cols-2 gap-2 mt-2 mb-3 max-w-sm mx-auto">
+  <button id="btn-torus" class="mode-btn-bottom font-ui h-9 px-3 rounded-md bg-[#E3A14B] text-[#26264C] text-sm font-medium border border-[#26264C]/20 shadow-sm">
+    Donut
+  </button>
+  <button id="btn-sphere" class="mode-btn-bottom font-ui h-9 px-3 rounded-md bg-[#E3A14B] text-[#26264C] text-sm font-medium border border-[#26264C]/20 shadow-sm">
+    Kugle
+  </button>
+  <button id="btn-knot" class="mode-btn-bottom font-ui h-9 px-3 rounded-md bg-[#E3A14B] text-[#26264C] text-sm font-medium border border-[#26264C]/20 shadow-sm">
+    Knude
+  </button>
+  <button id="btn-firkant" class="mode-btn-bottom font-ui h-9 px-3 rounded-md bg-[#E3A14B] text-[#26264C] text-sm font-medium border border-[#26264C]/20 shadow-sm">
+    Firkant
+  </button>
+</div>
+<h3 id="mode-title" class="font-heading text-2xl text-[#26264C] font-bold">
+    Vælg en formation
+  </h3>
+  <p id="mode-text" class="font-body text-sm mb-6 text-[#26264C] mb-6 leading-relaxed">
+   Klik på knapperne ovenfor for at se dronernes formations. Vælg Fuld skærm for at vise mønsteret på storskærm.
+  </p>
     <script is:inline>
    
   // beskrivelser af de forskellige dele
       const topButtons = document.querySelectorAll(".mode-btn-top");
       const titleEl = document.getElementById("mode-title");
       const textEl = document.getElementById("mode-text");
+      const resetBtn = document.getElementById("btn-reset");
+
+      // Standard tekst
+      const defaultText = {
+        title: "Vælg en komponent",
+        text: "Klik på en af knapperne ovenfor for at lære mere om dronens komponenter."
+      };
 
       const topCopy = {
         "btn-lazor": { title: "Laser", text: "Den højeffektive lyslaser skaber skarpe, klare lysfigurer på himlen, som kan ses fra flere kilometers afstand. I modsætning til fyrværkeri kræver den ingen eksplosive materialer og udleder hverken røg, partikler eller tungmetaller. Ét droneshow kan derfor opleves af langt flere mennesker – uden støj, affald eller brandrisiko."
@@ -128,6 +223,18 @@ import ThreeScene from "../components/ThreeScene.astro";
         active.classList.add("bg-[#EEB770]");
       }
 
+      function resetText() {
+        if (titleEl && textEl) {
+          titleEl.textContent = defaultText.title;
+          textEl.textContent = defaultText.text;
+        }
+        // Fjern aktiv styling fra alle knapper
+        topButtons.forEach(b => {
+          b.classList.remove("bg-[#EEB770]");
+          b.classList.add("bg-[#E3A14B]");
+        });
+      }
+
       topButtons.forEach(btn => {
         btn.addEventListener("click", () => {
           const info = topCopy[btn.id];
@@ -137,6 +244,11 @@ import ThreeScene from "../components/ThreeScene.astro";
           }
           markActive(topButtons, btn);
         });
+      });
+
+      // Tilbage knap - nulstil tekst
+      resetBtn?.addEventListener("click", () => {
+        resetText();
       });
 
       // ---  UI  ---
@@ -182,5 +294,7 @@ import ThreeScene from "../components/ThreeScene.astro";
   }
 </script>
 
+
   </main>
+  
 </Layout>
